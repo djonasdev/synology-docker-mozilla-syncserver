@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.4
 LABEL Dominic Jonas <info@dominic-jonas.de>
 
 ###################################################
