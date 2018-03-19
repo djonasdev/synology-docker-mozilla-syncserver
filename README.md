@@ -2,7 +2,7 @@
 Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
 
 ## Introduction
-The special feature of this container is to configure the **User and Group ID** of the running docker container. To use the existing user permissions of a `Synology` this is extremely important!
+The special feature of this container is to configure the **User and Group ID** of the running docker container. So you can use the existing user permissions of a `Synology`. This Docker image is also extremly lightweight with ~96MB.
 
 ## Quickstart
 
@@ -13,12 +13,12 @@ The special feature of this container is to configure the **User and Group ID** 
 5. Find `ID` of the user (step 2)
 ```bash
 id -u Docker-FirefoxSync
-1000
+1036
 ```
 6. Start container once from the `Console`. This will be deposited in the Docker app on the `Synology` (under the tab Image). It is important to use the `ID` (step 5) because of folder permissions.
 
 ```bash
-docker run -p 5000:5000 -e UID='1000' -e GID='1000' -v /data:/your/custom/path/on/Synology djonasdev/synology-docker-mozilla-syncserver
+docker run -p SynoPort5000:5000 -e UID='1036' -e GID='1036' -v /your/custom/path/on/Synology:/data/ djonasdev/synology-docker-mozilla-syncserver
 ```
 7. A new container has now been created on `Synology` in the Docker app. This can now be renamed and modified.
 8. You're done! The container is now always started with the previously used **User and Group ID**.
@@ -26,7 +26,43 @@ docker run -p 5000:5000 -e UID='1000' -e GID='1000' -v /data:/your/custom/path/o
 
 This image will automatically create a configuration file for
  Mozilla Syncserver with `SQLite Database`.
- 
+
+
+## Screenshots
+
+Download container
+
+![Download container](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/1.png "Download container")
+
+Setup #1 - General
+
+![Setup #1 - General](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/2.png "Setup #1 - General")
+
+Setup #2 - Volumes
+
+![Setup #2 - Volumes](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/3.png "Setup #2 - Volumes")
+
+Setup #3 - Ports
+
+![Setup #3 - Ports](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/4.png "Setup #3 - Ports")
+
+Setup #4 - User/Group ID
+
+![Setup #4 - User/Group ID](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/5.png "Setup #4 - User/Group ID")
+
+Setup #5 - Folder Permission
+
+![Setup #5 - Folder Permission](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/6.png "Setup #5 - Folder Permission")
+
+Setup #6 - Folder Permission
+
+![Setup #6 - Folder Permission](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/7.png "Setup #6 - Folder Permission")
+
+Start Container
+
+![Start Container](https://raw.githubusercontent.com/dojo90/synology-docker-mozilla-syncserver/master/screenshots/8.png "Start Container")
+
+
 ## Detailed description of image and containers
 
 ### Used ports
