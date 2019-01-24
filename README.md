@@ -1,5 +1,18 @@
 # Mozilla Firefox Sync Server Docker image
-Docker image for [Mozilla Sync Server](https://github.com/mozilla-services/syncserver)
+
+![Docker stars](https://img.shields.io/docker/stars/djonasdev/synology-mozilla-syncserver.png "Docker stars")
+&nbsp;
+![Docker pulls](https://img.shields.io/docker/pulls/djonasdev/synology-mozilla-syncserver.png "Docker pulls")
+&nbsp;
+![Latest release](https://img.shields.io/github/release/dojo90/synology-docker-mozilla-syncserver.svg "Latest release")
+&nbsp;
+![Release date](https://img.shields.io/github/release-date/dojo90/synology-docker-mozilla-syncserver.svg "Release date")
+
+[![Docker repo](https://github.com/dojo90/synology-mozilla-syncserver/blob/master/images/docker.png?raw=true "Docker repo")](https://hub.docker.com/r/djonasdev/synology-mozilla-syncserver)
+&nbsp;
+[![Github repo](https://github.com/dojo90/synology-mozilla-syncserver/blob/master/images/github.png?raw=true "Github repo")](https://github.com/dojo90/synology-docker-mozilla-syncserver)
+
+Dockerised [Mozilla Sync Server] (https://github.com/mozilla-services/syncserver) built from source
 
 ## Introduction
 The special feature of this container is to configure the **User and Group ID** of the running docker container. So you can use the existing user permissions of a `Synology`. This Docker image is also extremly lightweight with ~96MB.
