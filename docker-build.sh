@@ -7,4 +7,8 @@ DOCKER="docker"
 #Image name
 IMAGE="djonasdev/synology-docker-mozilla-syncserver"
 
+#Stop the old instance if already running
+./docker-stop.sh
+
+# build the new one
 $DOCKER build -t $IMAGE ./docker/
