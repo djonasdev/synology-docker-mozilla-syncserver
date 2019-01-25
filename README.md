@@ -8,9 +8,9 @@
 &nbsp;
 ![Release date](https://img.shields.io/github/release-date/dojo90/synology-docker-mozilla-syncserver.svg "Release date")
 
-[![Docker repo](https://github.com/dojo90/synology-mozilla-syncserver/blob/master/images/docker.png?raw=true "Docker repo")](https://hub.docker.com/r/djonasdev/synology-mozilla-syncserver)
+[![Docker repo](https://github.com/dojo90/synology-docker-mozilla-syncserver/blob/master/images/docker.png?raw=true "Docker repo")](https://hub.docker.com/r/djonasdev/synology-mozilla-syncserver)
 &nbsp;
-[![Github repo](https://github.com/dojo90/synology-mozilla-syncserver/blob/master/images/github.png?raw=true "Github repo")](https://github.com/dojo90/synology-docker-mozilla-syncserver)
+[![Github repo](https://github.com/dojo90/synology-docker-mozilla-syncserver/blob/master/images/github.png?raw=true "Github repo")](https://github.com/dojo90/synology-docker-mozilla-syncserver)
 
 Dockerised [Mozilla Sync Server] (https://github.com/mozilla-services/syncserver) built from source
 
