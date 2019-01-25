@@ -12,7 +12,7 @@
 &nbsp;
 [![Github repo](https://github.com/dojo90/synology-docker-mozilla-syncserver/blob/master/images/github.png?raw=true "Github repo")](https://github.com/dojo90/synology-docker-mozilla-syncserver)
 
-Dockerised [Mozilla Sync Server] (https://github.com/mozilla-services/syncserver) built from source
+Dockerised [Mozilla Sync Server](https://github.com/mozilla-services/syncserver) built from source
 
 ## Introduction
 The special feature of this container is to configure the **User and Group ID** of the running docker container. So you can use the existing user permissions of a `Synology`. This Docker image is also extremly lightweight with ~96MB.
