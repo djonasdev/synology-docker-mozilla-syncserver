@@ -37,7 +37,7 @@ apk update
 ###############################################
 # Runtime dependencies for Mozilla Syncserver #
 ###############################################
-apk add python py-pip libstdc++
+apk add python py-pip libstdc++ tzdata
 
 #################################################
 # Add build-deps                                #
