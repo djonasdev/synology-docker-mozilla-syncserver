@@ -10,12 +10,11 @@ set -x
 PATH="${PATH}:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
 
 #######################################################
-# Git commit hash from                                #
+# Git commit hash / tag from                          #
 # https://github.com/mozilla-services/syncserver      #
 # which we want to use for our Mozilla Syncserver     #
-# 04.02.2018 d03e4ece569491edd71ab77aba8cdea7590698ad #
 #######################################################
-GIT_COMMIT="d03e4ece569491edd71ab77aba8cdea7590698ad"
+GIT_COMMIT="1.8.0"
 
 #########################
 # Create data directory #
@@ -37,7 +36,7 @@ apk update
 ###############################################
 # Runtime dependencies for Mozilla Syncserver #
 ###############################################
-apk add python py-pip libstdc++
+apk add python py-pip libstdc++ tzdata libffi-dev openssl-dev && pip install --upgrade pip && pip install setuptools
 
 #################################################
 # Add build-deps                                #
@@ -60,6 +59,7 @@ echo '#!/bin/sh' > /usr/local/bin/virtualenv
 chmod +x /usr/local/bin/virtualenv
 mkdir ./local
 ln -s /usr/bin ./local/
+echo "start build"
 make build
 rm /usr/local/bin/virtualenv
 

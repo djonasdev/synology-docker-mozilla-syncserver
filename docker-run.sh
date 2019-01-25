@@ -16,6 +16,12 @@ DOCKER="docker"
 #Extra args to docker command. Like using remote dockerd or something else
 DOCKER_ARGS=""
 
+#Image name
+IMAGE="djonasdev/synology-docker-mozilla-syncserver"
+
+#Stop the old instance if already running
+./docker-stop.sh
+
 [ ! -z "$CONTAINER_HOSTNAME" ] && CONTAINER_HOSTNAME="--hostname=$CONTAINER_HOSTNAME"
 [ ! -z "$CONTAINER_NAME" ]     && CONTAINER_NAME="--name=$CONTAINER_NAME"
 [ ! -z "$RESTART_POLICY" ]      && RESTART_POLICY="--restart=$RESTART_POLICY"
@@ -27,4 +33,4 @@ $DOCKER $DOCKER_ARGS run \
 	$CONTAINER_NAME \
 	$RESTART_POLICY \
 	$EXTRA_ARGS \
-	djonasdev/synology-docker-mozilla-syncserver
+	$IMAGE
