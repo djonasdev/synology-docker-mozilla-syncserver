@@ -86,6 +86,10 @@ This image uses 1 tcp ports:
 ### Volume
 This image uses one volume with internal path `/data`, it will store `configuration file` and `SQLite Database` there.
 
+### SSL Support
+
+Since this container has `gunicorn >= v19.6.0` installed, it supports SSL (since v0.17.0 http://docs.gunicorn.org/en/0.17.0/news.html). There are two variable in the `syncserver.ini` file. For more informations visit http://docs.gunicorn.org/en/stable/settings.html#keyfile
+
 ### Web server configuration
 
 Mozilla Syncserver could work without any web-server, but I'd recommend you to use some web-server of your host machine to add HTTPS support.
