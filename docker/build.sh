@@ -14,7 +14,7 @@ PATH="${PATH}:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
 # https://github.com/mozilla-services/syncserver      #
 # which we want to use for our Mozilla Syncserver     #
 #######################################################
-GIT_COMMIT="1.8.0"
+GIT_COMMIT="1.9.1"
 
 #########################
 # Create data directory #
